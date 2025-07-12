@@ -1,0 +1,41 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+nav {
+  display: flex; justify-content: space-between; align-items: center;
+  background: #333; color: white; padding: 10px;
+  flex-wrap: wrap;
+}
+nav h1 { margin: 0; }
+.filters, .nav-right { display: flex; align-items: center; gap: 10px; }
+.filters select, .filters button { padding: 5px; }
+
+.questions, .answers { max-width: 800px; margin: auto; padding: 10px; }
+.question-card, .answer-card {
+  background: white; padding: 15px; margin: 10px 0;
+  border-radius: 6px; cursor: pointer;
+}
+.pagination { text-align: center; padding: 10px; }
+.ask-form, .form-container, .answer-form {
+  max-width: 600px; margin: 20px auto;
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 10px;
+}
+.ask-form input, .ask-form button, .form-container input, .form-container button, .answer-form button {
+  padding: 10px; font-size: 1em;
+}
+.profile-container { position: relative; }
+.profile-img { width: 30px; height: 30px; border-radius: 50%; cursor: pointer; }
+.hamburger-menu {
+  display: none; position: absolute; right: 0; top: 40px;
+  background: white; color: black; border: 1px solid #ccc;
+  border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  flex-direction: column; padding: 10px; z-index: 1000;
+}
+.hamburger-menu button { background: none; border: none; padding: 8px; cursor: pointer; width: 100%; }
+.hamburger-menu button:hover { background: #f0f0f0; }
+.profile-large { width: 50px; height: 50px; border-radius: 50%; margin-bottom: 10px; }
+
+.vote-btn { font-size: 1.5em; cursor: pointer; margin: 0 5px; }
+@media (max-width:600px) {
+  nav { flex-direction: column; align-items: flex-start; }
+  .filters { flex-direction: column; align-items: center; }
+}
